@@ -125,6 +125,14 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
-    //Zweite Test To Do
+    @Test
+    void testEqualsWithoutOperation() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(7);
+        calc.pressEqualsKey();
+
+        assertEquals("7", calc.readScreen());
+    }
 }
 
